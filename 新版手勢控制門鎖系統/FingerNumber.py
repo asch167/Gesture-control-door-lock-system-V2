@@ -82,6 +82,8 @@ class FN:
                 gesture_str = "9"
             elif (angle_list[0]<thr_angle_s) and (angle_list[1]>thr_angle) and (angle_list[2]>thr_angle) and (angle_list[3]>thr_angle) and (angle_list[4]>thr_angle):
                 gesture_str = "Great"
+            elif (angle_list[0]>thr_angle_s) and (angle_list[1]>thr_angle) and (angle_list[2]<thr_angle) and (angle_list[3]<thr_angle) and (angle_list[4]<thr_angle):
+                gesture_str = "ok"
         return gesture_str
 
     def detect(self, Screen=False):
